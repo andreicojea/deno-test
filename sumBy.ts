@@ -1,0 +1,5 @@
+import { sum } from 'https://deno.land/x/lodash@4.17.15-es/lodash.js';
+
+export function sumBy<T extends Record<string, unknown>>(items: T[], fn: (item: T) => number) {
+  return sum(items.map(i => fn(i)));
+}
