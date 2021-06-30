@@ -953,6 +953,7 @@ function sumBy(array, iteratee) {
 const { a , b  } = JSON.parse(Deno.args[0]);
 console.log(JSON.stringify(sumBy([
     a,
-    b
+    b,
+    {x: 4}
 ], (obj)=>obj.x
 )));
